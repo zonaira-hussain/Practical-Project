@@ -1,2 +1,19 @@
 ---
 # tasks file for nginx_role
+- name: 'install nginx'
+  apt:
+    pkg:
+    - nginx
+    state: latest
+    update_cache: true
+- name: 'check nginx has started'
+  service:
+    name: nginx
+    state: started
+- name: 'install the nginx.conf file'
+  template:
+    src: nginx.conf
+    dest: /etc/nginx/nginx.conf
+  notify: 'reload nginx'
+
+# check this, might need to add something in conf file
