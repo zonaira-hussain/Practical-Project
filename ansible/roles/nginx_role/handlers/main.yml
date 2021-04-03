@@ -1,6 +1,0 @@
----
-# handlers file for nginx_role
-- name: 'reload nginx'
-  service:
-    name: nginx
-    state: reloaded
