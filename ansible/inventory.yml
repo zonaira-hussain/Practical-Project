@@ -1,15 +1,15 @@
 ansible-user:
   hosts:
-    3.250.212.147:
+    34.246.182.192:
   vars:
     ansible_user: ubuntu
     ansible_ssh_private_key_file: "~/.ssh/id_rsa"
     ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
 
-# jenkins-user:
-#   hosts:
-#     # switch to jenkins user:
-#   vars:
-#     ansible_user: jenkins
-#     ansible_ssh_private_key_file: "~/.ssh/id_rsa"
-#     ansible_ssh_common_args: '-o StrictHostKeyChecking=no'
+jenkins-user:
+  hosts:
+    34.246.182.192:
+  vars:
+    ansible_user: jenkins
+    ansible_ssh_private_key_file: "~/.ssh/id_rsa"
+    ansible_ssh_common_args: '-o StrictHostKeyChecking=no'

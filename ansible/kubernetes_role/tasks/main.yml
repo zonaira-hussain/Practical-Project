@@ -1,0 +1,20 @@
+---
+# tasks file for kubernetes_role
+# - name: 'install docker'
+#   apt:
+#     name: docker.io
+#     state: present
+#     update_cache: true
+
+- name: 'download kubectl binary'
+  get_url:
+    url: "https://storage.googleapis.com/kubernetes-release/release/v1.20.5/bin/linux/amd64/kubectl"
+  tags:
+    - kubectl
+- name: Copy kubectl binary to destination directory
+  copy:
+    src: ./kubectl
+    dest: /usr/local/bin/kubectl
+    mode: 0755
+    owner: jenkins
+    remote_src: yes
