@@ -1,5 +1,5 @@
 pipeline{
-    agents
+    agents any
     stages{
         stage('Clone Flask app Repo'){
             steps{
@@ -7,13 +7,15 @@ pipeline{
                 sh "git clone https://gitlab.com/qacdevops/cne-sfia2-brief"
             }
         }
-        stage('Install Tools'){
+        stage('Build Application'){
             steps{
-                
+                sh "bash cluster.sh"
             }
         }
         stage('Test Application'){
             steps{
+                sh "cd cne-sfia2-brief && pytest"
+                sh "pytest --cov application"
 
             }
         }
