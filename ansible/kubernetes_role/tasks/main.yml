@@ -1,10 +1,5 @@
 ---
 # tasks file for kubernetes_role
-# - name: 'install docker'
-#   apt:
-#     name: docker.io
-#     state: present
-#     update_cache: true
 
 - name: 'download kubectl binary'
   get_url:
