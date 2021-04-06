@@ -20,5 +20,7 @@
   service:
     name: jenkins
     state: started
+# - name: 'print jenkins initial admin password'
+#   file: /var/lib/jenkins/secrets/initialAdminPassword
 
 
