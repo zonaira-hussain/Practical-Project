@@ -2,9 +2,13 @@
   become: true
   roles:
   - nginx_role
-  - jenkins-role
+  - jenkins_role
   - kubernetes_role
-# - hosts: jenkins-user
-#   become: true
-#   roles:
+
+
+- hosts: test-user
+  become: true
+  roles:
+  - docker_role
+  - pytest_role
   
