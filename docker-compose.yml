@@ -1,0 +1,28 @@
+version: "3.8"
+services:
+    zonaira-backend:
+        container_name: flask-app-backend
+        build: docker/zonaira-backend
+        restart: always
+        environment:
+          DATABASE_URI: <ADD DB URI>
+          SECRET_KEY: <ADD SECRET KEY>
+        links:
+            - database
+        depends_on:
+            - database
+        ports:
+            - 5001:5001
+
+    zonaira-frontend:
+        container_name: flask-app-frontend
+        build: docker/zonaira-frontend
+        restart: always
+        ports:
+            - 0.0.0.0:5000
+
+    database:
+        container_name: flask-app-db
+        build: (? am i building or using mysql image?)
+        restart: always
+

@@ -8,8 +8,14 @@ eksctl create cluster \
 --nodes 2 \
 --nodes-min 2 \
 --nodes-max 3 \
---node-type t2.micro \
+--node-type t3.micro \
 --with-oidc \
 --ssh-access \
 --ssh-public-key aws-instance-keypair \
 --managed
+
+echo 'creating namespace'
+kubectl create ns project-namespace.yml
+
+echo 'creating pod'
+kubectl
