@@ -3,8 +3,8 @@
   roles:
   - nginx_role
   - jenkins-role
-
-- hosts: jenkins-user
-  become: true
-  roles:
   - kubernetes_role
+# - hosts: jenkins-user
+#   become: true
+#   roles:
+  
