@@ -1,0 +1,8 @@
+---
+# tasks file for pytest_role
+- name: 'install pytest'
+  apt:
+    pkg:
+    - python3-pytest
+    state: latest
+    update_cache: true

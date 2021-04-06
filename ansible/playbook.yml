@@ -18,5 +18,5 @@
   become: true
   roles:
   - docker_role
-#  - pytest_role
+  - pytest_role
   
