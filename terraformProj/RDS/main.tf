@@ -33,7 +33,7 @@ resource "aws_db_instance" "test-db" {
     db_subnet_group_name = aws_db_subnet_group.default.name
     vpc_security_group_ids = var.vpc_security_group_ids
     skip_final_snapshot = true
-    identifier = "project-test-db"
+    identifier = "testdb"
     
     tags = {
        Name = "project-test-RDS"
