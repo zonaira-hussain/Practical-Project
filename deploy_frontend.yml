@@ -6,6 +6,7 @@ metadata:
     app: flask-app
   namespace: project-namespace
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: frontend-service
@@ -14,7 +15,6 @@ spec:
       labels:
         app: frontend-service
     spec:
-      replicas: 3
       containers:
       - name: flask-app-frontend
         image: zonaira/frontend:latest

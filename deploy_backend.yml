@@ -6,6 +6,7 @@ metadata:
     app: flask-app
   namespace: project-namespace
 spec:
+  replicas: 3
   selector:
     matchLabels:
       app: backend-service
@@ -13,10 +14,9 @@ spec:
     metadata:
       labels:
         app: backend-service
-spec:
-  replicas: 3
-  containers:
-  - name: flask-app-backend
-    image: zonaira/backend:latest
-    ports:
-    - containerPort: 5001
+    spec:
+      containers:
+      - name: flask-app-backend
+        image: zonaira/backend:latest
+        ports:
+        - containerPort: 5001
