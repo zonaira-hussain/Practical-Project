@@ -17,5 +17,15 @@ eksctl create cluster \
 echo 'creating namespace'
 kubectl create ns project-namespace.yml
 
-echo 'creating pod'
-kubectl
+echo 'creating services'
+kubectl create -f frontend_service.yml 
+kubectl create -f backend_service.yml
+kubectl create -f nginx_load_balancer.yml
+
+echo 'creating nginx config'
+kubectl create -f config_map.yml
+
+echo 'creating deployment files'
+kubectl create -f deploy_nginx.yml
+kubectl create -f deploy_frontend.yml
+kubectl create -f deploy_backend.yml
