@@ -1,7 +1,7 @@
-FROM python3.6
+FROM python
 RUN apt-get update && apt-get install -y python3-pip
-RUN pip install -r requirements.txt
 RUN git clone https://gitlab.com/qacdevops/cne-sfia2-brief
-WORKDIR /backend
+WORKDIR cne-sfia2-brief/backend
+RUN pip install -r requirements.txt
 EXPOSE 5001
 ENTRYPOINT ["python3","app.py"]
