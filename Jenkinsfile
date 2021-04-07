@@ -12,10 +12,10 @@ pipeline{
 
             }
         }
-        stage('Deploy Application'){
-            steps{
-                sh "bash deploy_flaskapp.sh"
-            }
-        }
+        // stage('Deploy Application'){
+        //     steps{
+        //         sh "bash deploy_flaskapp.sh"
+        //     }
+        // }
     }
 }

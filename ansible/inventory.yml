@@ -1,6 +1,6 @@
 ansible-user:
   hosts:
-    34.244.29.196:
+    63.32.92.216:
   vars:
     ansible_user: ubuntu
     ansible_ssh_private_key_file: "~/.ssh/id_rsa"
@@ -8,7 +8,7 @@ ansible-user:
 
 test-user:
   hosts:
-    34.244.29.196:
+    52.209.160.105:
   vars:
     ansible_user: ubuntu
     ansible_ssh_private_key_file: "~/.ssh/id_rsa"
