@@ -13,13 +13,13 @@ spec:
     metadata:
       labels:
         app: frontend-service
-spec:
-  replicas: 3
-  containers:
-  - name: flask-app-frontend
-    image: zonaira/frontend:latest
-    ports:
-    - containerPort: 5000
+    spec:
+      replicas: 3
+      containers:
+      - name: flask-app-frontend
+        image: zonaira/frontend:latest
+        ports:
+        - containerPort: 5000
 
   
 
