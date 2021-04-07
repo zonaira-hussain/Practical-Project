@@ -23,9 +23,9 @@ kubectl create -f backend_service.yml
 kubectl create -f nginx_load_balancer.yml
 
 echo 'creating nginx config'
-kubectl create -f config_map.yml
+kubectl apply -f config_map.yml
 
 echo 'creating deployment files'
-kubectl create -f deploy_nginx.yml
-kubectl create -f deploy_frontend.yml
-kubectl create -f deploy_backend.yml
+kubectl apply -f deploy_nginx.yml
+kubectl apply -f deploy_frontend.yml
+kubectl apply -f deploy_backend.yml
