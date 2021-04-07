@@ -15,7 +15,7 @@ eksctl create cluster \
 --managed
 
 echo 'creating namespace'
-kubectl create ns project-namespace.yml
+kubectl apply -f project-namespace.yml
 
 echo 'creating services'
 kubectl create -f frontend_service.yml 
