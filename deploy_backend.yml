@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: deployment
+metadata:
+  name: backend-deploy
+  labels:
+    app: flask-app
+  namespace: project-namespace
+spec:
+  selector:
+    matchLabels:
+      app: backend-service
+  template:
+    metadata:
+      labels:
+        app: backend-service
+spec:
+  replicas: 3
+  containers:
+  - name: flask-app-backend
+    image: zonaira/backend:latest
+    ports:
+    - containerPort: 5001
