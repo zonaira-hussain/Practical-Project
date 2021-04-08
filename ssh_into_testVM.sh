@@ -9,7 +9,7 @@ rm -rf cne-sfia2-brief
 # clone app repoexit
 git clone https://gitlab.com/qacdevops/cne-sfia2-brief
 apt-get update && apt-get install -y python3-pip
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 
 #install mysql
 sudo apt update -y && sudo apt install mysql-client-core-5.7 -y
