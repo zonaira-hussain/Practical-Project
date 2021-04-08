@@ -11,8 +11,11 @@ git clone https://gitlab.com/qacdevops/cne-sfia2-brief
 sudo apt update -y && sudo apt install mysql-client-core-5.7 -y
 
 #connect to test rds and prepopulate db
-mysql -h project-test-db.caumzfitbrs7.eu-west-1.rds.amazonaws.com -P 3306 -u root -p < cne-sfia2-brief/database/Create.sql
+mysql -h testdb.caumzfitbrs7.eu-west-1.rds.amazonaws.com -P 3306 -u root -p < cne-sfia2-brief/database/Create.sql
 
+#set variables
+TEST_DATABASE_URI=mysql+pymysql://root:password@testdb.caumzfitbrs7.eu-west-1.rds.amazonaws.com:3306/testdb
+SECRET_KEY=something
 # run tests
 cd cne-sfia2-brief && pytest backend/tests/
 cd cne-sfia2-brief && pytest frontend/tests/
