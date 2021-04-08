@@ -6,7 +6,8 @@ ssh -i ~/.ssh/id_rsa ubuntu@52.30.124.179
 rm -rf cne-sfia2-brief
 # clone app repo
 git clone https://gitlab.com/qacdevops/cne-sfia2-brief
-
+apt-get update && apt-get install -y python3-pip
+pip install -r requirements.txt
 #install mysql
 sudo apt update -y && sudo apt install mysql-client-core-5.7 -y
 
@@ -18,7 +19,7 @@ mysql -h testdb.caumzfitbrs7.eu-west-1.rds.amazonaws.com -P 3306 -u root -ppassw
 #set variables
 
 # run tests
-cd cne-sfia2-brief && pytest backend/tests/
-cd cne-sfia2-brief && pytest frontend/tests/
-cd cne-sfia2-brief && pytest backend/tests/ --cov application
-cd cne-sfia2-brief && pytest frontend/tests/ --cov application
+cd cne-sfia2-brief && python3 -m pytest backend/tests/test_backend.py
+cd cne-sfia2-brief && python3 -m pytest frontend/tests/test_frontend.py
+cd cne-sfia2-brief && python3 -m pytest backend/tests/test_backend.py --cov application
+cd cne-sfia2-brief && python3 -m pytest frontend/tests/test_frontend.py --cov application
