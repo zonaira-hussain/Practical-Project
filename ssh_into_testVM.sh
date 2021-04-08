@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #ssh into machine
-ssh -i ~/.ssh/id_rsa ubuntu@52.209.160.105
+ssh -i ~/.ssh/id_rsa ubuntu@34.246.183.57
 # remove if already exists
 rm -rf cne-sfia2-brief
 # clone app repo
