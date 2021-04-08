@@ -17,7 +17,7 @@ export TEST_DATABASE_URI=mysql+pymysql://root:password@testdb.caumzfitbrs7.eu-we
 export SECRET_KEY=something
 
 #connect to test rds and prepopulate db
-mysql -h testdb.caumzfitbrs7.eu-west-1.rds.amazonaws.com -P 3306 -u root -ppassword < cne-sfia2-brief/database/Create.sql
+mysql -h testdb.caumzfitbrs7.eu-west-1.rds.amazonaws.com -P 3306 -u root -ppassword < Practical-Project/database/Create.sql
 
 # run tests
 python3 -m pytest Practical-Project/backend/tests/
