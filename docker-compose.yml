@@ -4,7 +4,6 @@ services:
         container_name: flask-app-backend
         build: ./backend
         image: zonaira/backend:latest
-        restart: always
         environment:
           DATABASE_URI: mysql+pymysql://root:password@project-jenkins-db.caumzfitbrs7.eu-west-1.rds.amazonaws.com:3306/jenkins_db
           TEST_DATABASE_URI: mysql+pymysql://root:password@testdb.caumzfitbrs7.eu-west-1.rds.amazonaws.com:3306/testdb
@@ -18,7 +17,6 @@ services:
         container_name: flask-app-frontend
         build: ./frontend
         image: zonaira/frontend:latest
-        restart: always
         ports:
         - target: 5000
           published: 5000
