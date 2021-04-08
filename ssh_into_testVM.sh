@@ -8,6 +8,7 @@ rm -rf cne-sfia2-brief
 
 # clone app repoexit
 git clone https://gitlab.com/qacdevops/cne-sfia2-brief
+
 apt update && apt install -y python3-pip
 pip3 install -r requirements.txt
 
