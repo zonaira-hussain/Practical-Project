@@ -3,8 +3,8 @@
 #ssh into machine
 
 
-sudo docker build backend
-sudo docker build frontend
+sudo docker build backend -t zonaira/backend
+sudo docker build frontend -t zonaira/frontend
 
 
 
