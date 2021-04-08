@@ -2,7 +2,7 @@
 
 echo 'launching cluster'
 eksctl create cluster \
---name JenkinsCluster \
+--name ProjectCluster \
 --region eu-west-1 \
 --nodegroup-name ProjectNodes \
 --nodes 2 \
