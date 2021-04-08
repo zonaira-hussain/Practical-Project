@@ -4,6 +4,7 @@
 ssh -i ~/.ssh/id_rsa ubuntu@52.30.124.179 << EOF 
 
 https://github.com/zonaira-hussain/Practical-Project
+git checkout development
 apt update && apt install -y python3-pip
 cd Practical-Project/backend/ && pip3 install -r requirements.txt
 cd ~/
