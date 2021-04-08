@@ -19,10 +19,7 @@ mysql -h testdb.caumzfitbrs7.eu-west-1.rds.amazonaws.com -P 3306 -u root -ppassw
 #set variables
 
 # run tests
-cd cne-sfia2-brief && python3 -m pytest backend/tests/test_backend.py
-cd
-cd cne-sfia2-brief && python3 -m pytest frontend/tests/test_frontend.py
-cd
-cd cne-sfia2-brief && python3 -m pytest backend/tests/test_backend.py --cov application
-cd
-cd cne-sfia2-brief && python3 -m pytest frontend/tests/test_frontend.py --cov application
+python3 -m pytest cne-sfia2-brief/backend/tests/
+python3 -m pytest cne-sfia2-brief/frontend/tests/
+python3 -m pytest cne-sfia2-brief/backend/tests/ --cov application
+python3 -m pytest cne-sfia2-brief/frontend/tests/ --cov application
