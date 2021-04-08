@@ -6,8 +6,8 @@ services:
         image: zonaira/backend:latest
         restart: always
         environment:
-          DATABASE_URI: mysql+pymysql://root:password@project-jenkins-db.caumzfitbrs7.eu-west-1.rds.amazonaws.com:3306/jenkins_db
-          SECRET_KEY: zonairaisthebest
+          DATABASE_URI: ${DATABASE_URI}
+          SECRET_KEY: ${SECRET_KEY}
         ports:
         - target: 5001
           published: 5001
