@@ -17,7 +17,7 @@ export SECRET_KEY=something
 mysql -h testdb.caumzfitbrs7.eu-west-1.rds.amazonaws.com -P 3306 -u root -ppassword < cne-sfia2-brief/database/Create.sql
 
 #set variables
-
+touch myfile.txt
 # run tests
 python3 -m pytest cne-sfia2-brief/backend/tests/
 python3 -m pytest cne-sfia2-brief/frontend/tests/
