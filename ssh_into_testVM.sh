@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #ssh into machine
-ssh -i ~/.ssh/id_rsa ubuntu@52.30.124.179
+ssh -i ~/.ssh/id_rsa ubuntu@52.30.124.179 << EOF 
 # remove if already exists
 rm -rf cne-sfia2-brief
 # clone app repo
@@ -15,7 +15,7 @@ export TEST_DATABASE_URI=mysql+pymysql://root:password@testdb.caumzfitbrs7.eu-we
 export SECRET_KEY=something
 #connect to test rds and prepopulate db
 mysql -h testdb.caumzfitbrs7.eu-west-1.rds.amazonaws.com -P 3306 -u root -ppassword < cne-sfia2-brief/database/Create.sql
-
+cd ~/
 #set variables
 touch myfile.txt
 # run tests
@@ -23,3 +23,5 @@ python3 -m pytest cne-sfia2-brief/backend/tests/
 python3 -m pytest cne-sfia2-brief/frontend/tests/
 python3 -m pytest cne-sfia2-brief/backend/tests/ --cov application
 python3 -m pytest cne-sfia2-brief/frontend/tests/ --cov application
+
+EOF
