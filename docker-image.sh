@@ -3,8 +3,8 @@
 #ssh into machine
 
 
-sudo docker build -f backend .
-sudo docker build -f frontend .
+sudo docker build backend
+sudo docker build frontend
 
 
 
