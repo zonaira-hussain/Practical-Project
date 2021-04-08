@@ -2,24 +2,27 @@ version: "3.7"
 services:
     zonaira-backend:
         container_name: flask-app-backend
-        build: ./docker/backend
+        build: ./backend
         image: zonaira/backend:latest
         restart: always
         environment:
           DATABASE_URI: mysql+pymysql://root:password@project-jenkins-db.caumzfitbrs7.eu-west-1.rds.amazonaws.com:3306/jenkins_db
+          TEST_DATABASE_URI: mysql+pymysql://root:password@testdb.caumzfitbrs7.eu-west-1.rds.amazonaws.com:3306/testdb
           SECRET_KEY: something
         ports:
         - target: 5001
           published: 5001
+          protocol: tcp
 
     zonaira-frontend:
         container_name: flask-app-frontend
-        build: ./docker/frontend
+        build: ./frontend
         image: zonaira/frontend:latest
         restart: always
         ports:
         - target: 5000
           published: 5000
+          protocol: tcp
 
 
 
