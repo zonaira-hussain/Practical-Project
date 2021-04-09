@@ -7,7 +7,7 @@ services:
     environment:
       DATABASE_URI: mysql+pymysql://root:password@project-jenkins-db.caumzfitbrs7.eu-west-1.rds.amazonaws.com:3306/jenkins_db
       TEST_DATABASE_URI: mysql+pymysql://root:password@testdb.caumzfitbrs7.eu-west-1.rds.amazonaws.com:3306/testdb
-      SECRET_KEY: something
+      SECRET_KEY: freayugbbgvusggu7348788553fjdbdfbb
     ports:
     - target: 5001
       published: 5001

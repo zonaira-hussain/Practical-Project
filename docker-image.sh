@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #ssh into jenkins machine
-ssh -i /home/jenkins/.ssh/id_rsa ubuntu@34.245.88.183 << EOF
+ssh -i /home/jenkins/.ssh/id_rsa ubuntu@34.244.93.200 << EOF
 
 # docker build backend -t zonaira/backend
 # docker build frontend -t zonaira/frontend

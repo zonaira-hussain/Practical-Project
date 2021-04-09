@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ssh -i /home/jenkins/.ssh/id_rsa ubuntu@34.245.88.183 << EOF 
+ssh -i /home/jenkins/.ssh/id_rsa ubuntu@34.244.93.200 << EOF 
 
 #cloning my repo
 git clone https://github.com/zonaira-hussain/Practical-Project.git
