@@ -11,16 +11,16 @@ pipeline{
                     sh "bash docker-image.sh"
                 }    
             }
-            stage('Build Application'){
-                steps{
-                    sh "bash kubernetes/cluster.sh"
-                }
-            }
-            stage('Deploy'){
-                steps{
-                    sh "bash kubernetes/kubernetes.sh"
-                }
-            }
+            // stage('Build Application'){
+            //     steps{
+            //         sh "bash kubernetes/cluster.sh"
+            //     }
+            // }
+            // stage('Deploy'){
+            //     steps{
+            //         sh "bash kubernetes/kubernetes.sh"
+            //     }
+            // }
             
             
         }
