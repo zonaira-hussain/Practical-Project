@@ -1,0 +1,12 @@
+---
+# tasks file for nginx_role
+- name: 'install nginx'
+  apt:
+    pkg:
+    - nginx
+    state: latest
+    update_cache: true
+- name: 'check nginx has started'
+  service:
+    name: nginx
+    state: started

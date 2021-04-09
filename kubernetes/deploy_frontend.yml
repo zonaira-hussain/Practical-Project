@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-deploy
+  labels:
+    app: flask-app
+  namespace: project-namespace
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: frontend-service
+  template:
+    metadata:
+      labels:
+        app: frontend-service
+    spec:
+      containers:
+      - name: flask-app-frontend
+        image: zonaira/frontend:latest
+        ports:
+        - containerPort: 5000
+
+  
+
