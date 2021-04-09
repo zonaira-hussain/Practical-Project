@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: nginx-config
-  namespace: project-namespaces
+  namespace: project-namespace
 data:
   nginx.conf: |
     server {
