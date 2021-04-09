@@ -18,7 +18,7 @@ pipeline{
             }
             stage('Deploy'){
                 steps{
-                    sh "bash kubernetes.sh"
+                    sh "bash kubernetes/kubernetes.sh"
                 }
             }
             
