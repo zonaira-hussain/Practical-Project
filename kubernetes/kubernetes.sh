@@ -1,3 +1,7 @@
+#!/bin/bash
+
+cd kubernetes/
+
 echo 'creating namespace'
 kubectl apply -f project-namespace.yml
 
