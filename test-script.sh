@@ -16,7 +16,7 @@ docker-compose up -d --build
 #run the tests in the images through docker containers
 docker exec flask-app-backend bash -c "pytest tests/"
 docker exec flask-app-frontend bash -c "pytest tests/"
-docker exec backend bash -c "pytest tests/ --cov application"
-docker exec frontend bash -c "pytest tests/ --cov application"
+docker exec flask-app-backend bash -c "pytest tests/ --cov application"
+docker exec flask-app-frontend bash -c "pytest tests/ --cov application"
 docker-compose down
 EOF
