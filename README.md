@@ -33,7 +33,8 @@ I created a graph of the tools I will be using to create this project and how th
 * Infrastucture Management: Terraform
 
 
-[Link]()
+![image](https://user-images.githubusercontent.com/78487653/114124437-5de62600-98ec-11eb-99e3-358baa76bd58.png)
+
 
 
 
@@ -44,6 +45,9 @@ Link to the full risk assessment can be found here:
 [Risk Assessment](https://docs.google.com/spreadsheets/d/15b4NV8_hYK5qgIZLMVYyuaRH7KrbpBTeHN9K1fcmpyo/edit?usp=sharing)
 
 The screenshot of the risk assessment shows the potential risks that could occur from deploying an app. It is important to assess these risks and plan ahead by implementing features that could prevent it.
+
+![image](https://user-images.githubusercontent.com/78487653/114124515-8ec65b00-98ec-11eb-82aa-79c68f11c495.png)
+
 
 # Jira Board
 
@@ -57,6 +61,9 @@ C - Could have,
 W - Would like to have.
 
 The following is a screenshot of on of the sprints created using Jira:
+
+![image](https://user-images.githubusercontent.com/78487653/114124635-c9c88e80-98ec-11eb-9f23-c8a5c918cfe0.png)
+
 
 
 
