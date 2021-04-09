@@ -1,9 +1,9 @@
 #!/bin/bash
 
 ssh -i /home/jenkins/.ssh/id_rsa ubuntu@34.244.93.200 << EOF 
-
+rm -rf Practical-Project
 #cloning my repo
-git clone https://github.com/zonaira-hussain/Practical-Project.git
+git clone https://github.com/zonaira-hussain/Practical-Project
 #cd into project directory
 cd Practical-Project
 sudo apt update -y && sudo apt install mysql-client-core-5.7 -y
