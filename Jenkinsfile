@@ -13,7 +13,7 @@ pipeline{
             }
             stage('Build Application'){
                 steps{
-                    sh "bash cluster.sh"
+                    sh "bash kubernetes/cluster.sh"
                 }
             }
             stage('Deploy'){
